@@ -20,7 +20,7 @@ import seaborn as sns
 
 @st.cache_data
 def load_data():
-  df = pd.read_csv('Bitcoin Pulse Hourly Dataset from Markets Trends and Fear.csv')
+  df = pd.read_csv('Bitcoin Pulse  Hourly Dataset from Markets Trends and Fear.csv') 
   df['timestamp'] = pd.to_datetime(df['timestamp'])
   df.set_index('timestamp', inplace=True)
   return df
