@@ -4,7 +4,7 @@
   "metadata": {
     "colab": {
       "provenance": [],
-      "authorship_tag": "ABX9TyODzGQKlMNTgMnHEvi8ZxFH",
+      "authorship_tag": "ABX9TyNsBJK2s31vVxu/18amNyrO",
       "include_colab_link": true
     },
     "kernelspec": {
@@ -136,7 +136,7 @@
       "source": [
         "@st.cache_data\n",
         "def load_data():\n",
-        "  df = pd.read_csv('/content/Bitcoin Pulse  Hourly Dataset from Markets Trends and Fear.csv')\n",
+        "  df = pd.read_csv('Bitcoin Pulse  Hourly Dataset from Markets Trends and Fear.csv')\n",
         "  df['timestamp'] = pd.to_datetime(df['timestamp'])\n",
         "  df.set_index('timestamp', inplace=True)\n",
         "  return df\n",
@@ -148,21 +148,21 @@
           "base_uri": "https://localhost:8080/"
         },
         "id": "Ib4gc7lfxdWF",
-        "outputId": "a90b6a28-6deb-4981-caef-4f664ff0f5f2"
+        "outputId": "12bc03cf-955d-442c-b557-af88a2b00569"
       },
-      "execution_count": 9,
+      "execution_count": 28,
       "outputs": [
         {
           "output_type": "stream",
           "name": "stderr",
           "text": [
-            "2025-04-27 05:54:26.905 No runtime found, using MemoryCacheStorageManager\n",
-            "2025-04-27 05:54:26.909 No runtime found, using MemoryCacheStorageManager\n",
-            "2025-04-27 05:54:26.911 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-            "2025-04-27 05:54:26.913 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-            "2025-04-27 05:54:26.914 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-            "2025-04-27 05:54:27.407 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
-            "2025-04-27 05:54:27.408 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
+            "2025-04-27 06:12:12.124 No runtime found, using MemoryCacheStorageManager\n",
+            "2025-04-27 06:12:12.127 No runtime found, using MemoryCacheStorageManager\n",
+            "2025-04-27 06:12:12.128 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
+            "2025-04-27 06:12:12.129 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
+            "2025-04-27 06:12:12.130 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
+            "2025-04-27 06:12:12.560 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n",
+            "2025-04-27 06:12:12.561 Thread 'MainThread': missing ScriptRunContext! This warning can be ignored when running in bare mode.\n"
           ]
         }
       ]
