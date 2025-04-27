@@ -18,7 +18,7 @@ import seaborn as sns
 
 """## Configuration"""
 
-st.set_page_config(page_title="Cryptocurrency EDA Dashboard", page_icon="💰", layout="wide")
+#st.set_page_config(page_title="Cryptocurrency EDA Dashboard", page_icon="💰", layout="wide")
 
 """## Load Data"""
 
