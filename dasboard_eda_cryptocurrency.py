@@ -116,22 +116,23 @@ st.markdown(f"**Volatilitas Terakhir {selected_crypto}: {rolling_volatility.iloc
 
 ## Grafik 5: Harga Tertinggi & Terendah
 
-st.header("📊 Grafik 6: Volume Perdagangan")
+st.header("📊 Grafik 5: Harga Tertinggi, Terendah, dan Penutupan (OHLC)")
 
-st.markdown("_Volume memperlihatkan seberapa banyak cryptocurrency diperdagangkan dalam periode tertentu._")
+st.markdown("_Analisis rentang harga menggunakan data Open, High, Low, dan Close._")
 
-volume_col_name = col_name.replace('close', 'volume')
+ohlc_data = filtered_df[['timestamp', 
+                         col_name.replace('close', 'open'),
+                         col_name.replace('close', 'high'),
+                         col_name.replace('close', 'low'),
+                         col_name]]
 
-if volume_col_name in filtered_df.columns:
-    volume_data = filtered_df[['timestamp', volume_col_name]].dropna()
+ohlc_data.columns = ['timestamp', 'Open', 'High', 'Low', 'Close']
 
-    fig6 = px.bar(volume_data, x='timestamp', y=volume_col_name, title=f'Volume Perdagangan {selected_crypto}')
-    fig6.update_layout(xaxis_title='Tanggal', yaxis_title='Volume')
-    st.plotly_chart(fig6, use_container_width=True)
+fig5 = px.line(ohlc_data, x='timestamp', y=['Open', 'High', 'Low', 'Close'], title=f'OHLC {selected_crypto}')
+fig5.update_layout(xaxis_title='Tanggal', yaxis_title='Harga (USD)')
+st.plotly_chart(fig5, use_container_width=True)
 
-    st.markdown(f"**Volume Terakhir {selected_crypto}: {volume_data[volume_col_name].iloc[-1]:,.0f} transaksi**")
-else:
-    st.warning("Data volume tidak tersedia untuk cryptocurrency ini.")
+st.markdown(f"**Open: ${ohlc_data['Open'].iloc[-1]:,.2f} | High: ${ohlc_data['High'].iloc[-1]:,.2f} | Low: ${ohlc_data['Low'].iloc[-1]:,.2f} | Close: ${ohlc_data['Close'].iloc[-1]:,.2f}**")
 
 # Grafik 6: Volume Perdagangan
 
