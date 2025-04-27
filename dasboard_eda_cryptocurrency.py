@@ -17,7 +17,6 @@ st.set_page_config(page_title="Cryptocurrency EDA Dashboard", page_icon="💰", 
 def load_data():
   df = pd.read_csv('Bitcoin Pulse  Hourly Dataset from Markets Trends and Fear.csv')
   df['timestamp'] = pd.to_datetime(df['timestamp'])
-  df.set_index('timestamp', inplace=True)
   return df
 
 df = load_data()
