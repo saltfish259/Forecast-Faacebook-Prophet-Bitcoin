@@ -41,7 +41,6 @@ available_cryptos = list(crypto_mapping.values())
 st.sidebar.header("Filter")
 selected_crypto = st.sidebar.selectbox("Pilih Cryptocurrency", available_cryptos)
 date_range = st.sidebar.date_input("Pilih Rentang Tanggal", [df['timestamp'].min(), df['timestamp'].max()])
-selected_analysis = st.sidebar.selectbox("Pilih Metode Analisis", ["Close Price", "Volume", "Volatility (High-Low)"])
 
 #---Filter data---
 df_filtered = df[(df['timestamp'] >= pd.to_datetime(date_range[0])) & (df['timestamp'] <= pd.to_datetime(date_range[1]))]
