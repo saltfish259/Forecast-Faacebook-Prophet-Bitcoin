@@ -35,7 +35,7 @@ crypto_mapping = {
     'SOL_USDT_1h_close': 'SOL',
     'XRP_USDT_1h_close': 'XRP'
 }
-available_cryptos = list(crypto_mapping.values()))
+available_cryptos = list(crypto_mapping.values())
 
 #---Sidebar---
 st.sidebar.header("Filter")
