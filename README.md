@@ -1,6 +1,6 @@
 # 💰 Crypto Market EDA Dashboard
 
-[![View on Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)]([https://YOUR-STREAMLIT-APP-LINK-HERE](https://forecast-faacebook-prophet-bitcoin-fapetjzyhsua5n6ftahkcr.streamlit.app/))
+[![View on Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://forecast-faacebook-prophet-bitcoin-fapetjzyhsua5n6ftahkcr.streamlit.app/)
 
 📈 **Explore Cryptocurrency Price Movements, Volume, and Volatility — all in one interactive dashboard!**
 
