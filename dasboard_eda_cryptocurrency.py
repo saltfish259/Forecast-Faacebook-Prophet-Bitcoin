@@ -20,7 +20,7 @@ st.set_page_config(page_title="Crypto Market EDA Dashboard", page_icon="💰", l
 #---Load Data---
 @st.cache_data
 def load_data():
-  df = pd.read_csv('Bitcoin Pulse  Hourly Dataset from Markets Trends and Fear.csvv')
+  df = pd.read_csv('Bitcoin Pulse  Hourly Dataset from Markets Trends and Fear.csv')
   df['timestamp'] = pd.to_datetime(df['timestamp'])
   return df
 
