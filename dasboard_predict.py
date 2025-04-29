@@ -77,8 +77,17 @@ st.subheader(f"Forecast {selected_currency} untuk {periods} Hari ke Depan")
 fig1 = model.plot(forecast)
 st.pyplot(fig1)
 
-st.subheader("Tabel Hasil Forecast")
-st.dataframe(forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].tail(periods))
+forecast_renamed = forecast[['ds', 'yhat', 'yhat_lower', 'yhat_upper']].rename(columns={'ds': 'Date'})
+
+st.subheader("Forecast Table")
+st.markdown("""
+**Keterangan:**
+- `Date`: Tanggal prediksi
+- `yhat`: Nilai prediksi
+- `yhat_upper`: Batas atas prediksi (confidence interval)
+- `yhat_lower`: Batas bawah prediksi (confidence interval)
+""")
+st.dataframe(forecast_renamed)
 
 st.subheader("Ringkasan Prediksi")
 col1, col2, col3 = st.columns(3)
