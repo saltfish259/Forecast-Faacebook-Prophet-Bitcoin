@@ -27,7 +27,7 @@ def train_prophet(df, selected_currency):
   df_model = df[['ds', open_col, high_col, low_col, close_col]].copy()
   df_model.rename(columns={close_col:'y'}, inplace=True)
 
-  model = prophet(
+  model = train_prophet(
       yearly_seasonality = True,
       weekly_seasonality = True,
       daily_seasonality = True,
