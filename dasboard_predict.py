@@ -12,7 +12,7 @@ import pandas as pd
 from prophet import Prophet
 import matplotlib.pyplot as plt
 
-@st.chace_data
+@st.cache_data
 def load_data():
   df = pd.read_csv('df_clean_crypto.csv')
   df['ds'] = pd.to_datetime(df['ds'])
