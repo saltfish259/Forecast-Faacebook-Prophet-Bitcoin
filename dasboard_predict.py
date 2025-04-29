@@ -31,7 +31,7 @@ def train_prophet(df, selected_currency):
       yearly_seasonality = True,
       weekly_seasonality = True,
       daily_seasonality = True,
-      seasonality_mode = 'multiplicative'
+      seasonality_mode = 'multiplicative',
       changepoint_prior_scale = 0.2,
       seasonality_prior_scale = 0.2,
       n_changepoints = 50
