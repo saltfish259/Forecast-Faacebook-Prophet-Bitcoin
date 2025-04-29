@@ -10,7 +10,7 @@ Original file is located at
 import streamlit as st
 import pandas as pd
 from prophet import Prophet
-from matplotlib.pyplot as plt
+import matplotlib.pyplot as plt
 
 @st.chace_data
 def load_data():
